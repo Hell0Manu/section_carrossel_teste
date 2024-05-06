@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Sections</title>
+</head>
+<body>
+
+
+     <!--Section 3 -->
+     <section class="section_three">
+        <div class="container_three">
+            <div class="titles_three">
+                <h1>O software de BPM que os times de alta performance amam</h1>
+                <div class="links_three">
+                    <a href="#"><p>Leia todas as histórias de clientes </p><span class="mdi mdi-arrow-right"></span></a>
+                </div>
+            </div>
+
+            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+            <ol class="carousel__viewport">
+                <li id="carousel__slide1" tabindex="0" class="carousel__slide"> 
+                    <div class="carousel__snapper">
+                        <a href="#CEO" class="arrow-left">Go to last slide</a>
+                        <a href="#Business" class="arrow-left">Go to next slide</a>
+                    </div>
+                </li>
+
+                <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#teste" class="arrow-leftv">Go to previous slide</a>
+                    <a href="#seila"  class="arrow-left">Go to next slide</a>
+                  </li>
+            </ol>
+
+            <div id="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+            <div class="items_three"> 
+                <div id="CEO" class="item_three"></div>
+                <div  id="Business" class="item_three"></div>
+                <div  id="teste" class="item_three"></div>
+                <div  id="seila" class="item_three"></div>
+            </div>
+            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+     </section>
+
+     <style>
+        .section_three {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container_three {
+            display: flex;
+            width: 1452px;
+            height: 992px;
+            margin: 75.5px 6px;
+            align-items: center;
+            flex-direction: column; 
+            position: relative; 
+        }
+
+        .titles_three {
+            height: 120px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 907.19px 388.31px;
+        }
+
+        .titles_three h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .links_three, .links_three a {
+            display: flex;
+            align-items: center;
+        }
+
+        .links_three a {
+            text-decoration: none;
+            color: #0B66FF;
+        }
+
+        .links_three span {
+            font-size: 18px;
+            margin-left: 1.37px;
+        }
+
+        .items_three {
+            margin-top: 62px;
+            display:flex;
+            grid-gap: 24px; 
+            width: 75%;
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+        }
+
+        /* .items_three::-webkit-scrollbar {
+            display: none;
+        } */
+        
+
+        .item_three {
+            display: flex;
+            width: 375px;
+            height: 467px;
+            padding: 64px;
+            
+            border-radius: 16px;
+            align-items: center;
+            flex-direction: column;
+            background-color: #0909db; 
+            flex-shrink: 0;
+            scroll-snap-align: start;
+        }
+
+
+        .contant_three  {
+            width: 395px;
+            height: 240px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .img_three {
+            margin-bottom: 12px;
+        }
+
+        .subtitle_three {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .subtitle_three p {
+            margin: 0 0 12px 0;
+            color: #7A7A7A;
+        }
+
+        .subtitle_three h3{
+            margin: 0;
+        }
+
+        .item_three span {
+            margin: 15px 0 15px 0;
+        }
+
+        .arrow-left span, .arrow-right span {
+            top: 50%; 
+            font-size: 48px;
+            position: absolute;
+            transform: translateY(-50%);   
+            cursor: pointer;
+        }
+
+
+        .arrow-left span {
+            left: 0;
+        }
+
+        .arrow-right span {
+            right: 0;
+            
+        }
+        
+        .visuallyhidden:nth-child(-n+)
+            {
+                display: none;
+            }
+        
+        @media  (max-width:1452px) {
+
+            .titles_three {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                grid-template-columns:repeat(1, 1fr);
+            }
+
+            .container_three {
+                width: 70%;
+                height: 992px;
+            }
+        }
+     </style>
+</body>
+</html>
