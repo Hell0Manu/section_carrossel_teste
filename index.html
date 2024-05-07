@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +8,74 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Sections</title>
 </head>
+
 <body>
 
 
-     <!--Section 3 -->
-     <section class="section_three">
+    <!--Section 3 -->
+    <section class="section_three">
         <div class="container_three">
             <div class="titles_three">
                 <h1>O software de BPM que os times de alta performance amam</h1>
                 <div class="links_three">
-                    <a href="#"><p>Leia todas as histórias de clientes </p><span class="mdi mdi-arrow-right"></span></a>
+                    <a href="#">
+                        <p>Leia todas as histórias de clientes </p><span class="mdi mdi-arrow-right"></span>
+                    </a>
                 </div>
             </div>
 
-            
-            <ol class="items_three">
-              
-                <li id="CEO" tabindex="0"class="item_three"> 
-                    <div class="carousel__snapper">
-                        <a href="#seila" class="arrow-left">Go to last slide</a>
-                        <a href="#Business" class="arrow-right">  <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>Go to next slide</a>
-                    </div>
-                </li>
 
-                <li  id="Business" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#CEO" class="arrow-left">Go to previous slide</a>
-                    <a href="#teste"  class="arrow-left">Go to next slide</a>
+
+            <ol class="items_three">
+               
+                    <li id="CEO" tabindex="0" class="item_three">
+                        <a href="#seila" class="arrow-left">
+                            Go to last slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#Business" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </li>
+               
+
+                <li id="Business" tabindex="0" class="item_three">
+                    <a href="#CEO" class="arrow-left">
+                        Go to previous slide
+                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                    </a>
+                    <a href="#teste" class="arrow-right">
+                        Go to next slide
+                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                    </a>
                 </li>
 
                 <li id="teste" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#Business" class="arrow-left">Go to previous slide</a>
-                    <a href="#seila"  class="arrow-left">Go to next slide</a>
+                    <a href="#Business" class="arrow-left">
+                        Go to previous slide
+                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                    </a>
+                    <a href="#seila" class="arrow-right">
+                        Go to next slide
+                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                    </a>
                 </li>
 
                 <li id="seila" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#teste" class="arrow-left">Go to previous slide</a>
-                    <a href="#CEO"  class="arrow-left">Go to next slide</a>
+                    <a href="#teste" class="arrow-left">
+                        Go to previous slide
+                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                    </a>
+                    <a href="#CEO" class="arrow-right">
+                        Go to next slide
+                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                    </a>
                 </li>
-                <div id="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
             </ol>
+    </section>
 
-           
-
-           
-     </section>
-
-     <style>
-        
-
+    <style>
         .section_three {
             display: flex;
             justify-content: center;
@@ -70,8 +88,8 @@
             height: 992px;
             margin: 75.5px 6px;
             align-items: center;
-            flex-direction: column; 
-            position: relative; 
+            flex-direction: column;
+            position: relative;
         }
 
         .titles_three {
@@ -86,7 +104,8 @@
             font-size: 40px;
         }
 
-        .links_three, .links_three a {
+        .links_three,
+        .links_three a {
             display: flex;
             align-items: center;
         }
@@ -103,36 +122,37 @@
 
         .items_three {
             margin-top: 62px;
-            display:flex;
-            grid-gap: 24px; 
+            display: flex;
+            grid-gap: 24px;
             width: 75%;
             display: flex;
             overflow-x: scroll;
             scroll-behavior: smooth;
             -ms-overflow-style: none;
+            padding: 0;
         }
 
         /* .items_three::-webkit-scrollbar {
             display: none;
         } */
-        
+
 
         .item_three {
             display: flex;
-            width: 375px;
+            width: 395px;
             height: 467px;
             padding: 64px;
-            
+
             border-radius: 16px;
             align-items: center;
             flex-direction: column;
-            background-color: #0909db; 
+            background-color: #0909db;
             flex-shrink: 0;
             scroll-snap-align: start;
         }
 
 
-        .contant_three  {
+        .contant_three {
             width: 395px;
             height: 240px;
             font-size: 20px;
@@ -154,7 +174,7 @@
             color: #7A7A7A;
         }
 
-        .subtitle_three h3{
+        .subtitle_three h3 {
             margin: 0;
         }
 
@@ -162,12 +182,28 @@
             margin: 15px 0 15px 0;
         }
 
-        .arrow-left span, .arrow-right span {
-            top: 50%; 
+        .arrow-left span,
+        .arrow-right span {
+
             font-size: 48px;
             position: absolute;
-            transform: translateY(-50%);   
+
+            transform: translateY(-50%);
             cursor: pointer;
+
+        }
+
+        .arrow-left,
+        .arrow-right {
+            position: absolute;
+            font-size: 24px;
+            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);
+            display: none;
+            font-size: 0;
+            outline: 0;
+
         }
 
         .arrow-left span {
@@ -176,16 +212,41 @@
 
         .arrow-right span {
             right: 0;
-            
+
         }
 
-        @media  (max-width:1452px) {
+        .item_three:first-child .arrow-left,
+        .item_three:first-child .arrow-right {
+            display: block;
+        }
+
+        .item_three:focus-within .arrow-left,
+        .item_three:focus-within .arrow-right {
+            display: block;
+        }
+
+
+
+        .arrow-left {
+            left: 0;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+
+        .arrow-right {
+            background-color: red;
+        }
+
+        @media (max-width:1452px) {
 
             .titles_three {
                 display: grid;
                 align-items: center;
                 justify-content: center;
-                grid-template-columns:repeat(1, 1fr);
+                grid-template-columns: repeat(1, 1fr);
+                -webkit-overflow-scrolling: touch;
             }
 
             .container_three {
@@ -193,6 +254,7 @@
                 height: 992px;
             }
         }
-     </style>
+    </style>
 </body>
+
 </html>
