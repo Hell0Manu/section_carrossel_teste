@@ -23,57 +23,92 @@
                     </a>
                 </div>
             </div>
-            
-            <ol class="items_three">
+
+            <ol class="items_mobile">
                 <li id="CEO" tabindex="0" class="item_three">
-                    <div class="carousel__snapper">
-                        <a href="#seila" class="arrow-left">
+    
+                        <a href="#seila" class="arrow-left-mobile">
                             Go to last slide
-                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                            <div class="arrow-left-mobile"><span class="mdi mdi-arrow-left"></span></div>
                         </a>
-                        <a href="#Business" class="arrow-right">
+                        <a href="#Business" class="arrow-right-mobile">
                             Go to next slide
-                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                            <div class="arrow-right-mobile"><span class="mdi mdi-arrow-right"></span></div>
                         </a>
-                    </div>
                 </li>
 
                 <li id="Business" tabindex="0" class="item_three">
-                    <div class="carousel__snapper">
-                    <a href="#CEO" class="arrow-left">
+                    <a href="#CEO" class="arrow-left-mobile">
                         Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        <div class="arrow-left-mobile"><span class="mdi mdi-arrow-left"></span></div>
                     </a>
-                    <a href="#teste" class="arrow-right">
+                    <a href="#teste" class="arrow-right-mobile">
                         Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        <div class="arrow-right-mobile"><span class="mdi mdi-arrow-right"></span></div>
                     </a>
                 </li>
 
                 <li id="teste" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#Business" class="arrow-left">
+                    <a href="#Business" class="arrow-left-mobile">
                         Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        <div class="arrow-left-mobile"><span class="mdi mdi-arrow-left"></span></div>
                     </a>
-                    <a href="#seila" class="arrow-right">
+                    <a href="#seila" class="arrow-right-mobile">
                         Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        <div class="arrow-right-mobile"><span class="mdi mdi-arrow-right"></span></div>
                     </a>
                 </li>
 
                 <li id="seila" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#teste" class="arrow-left">
+                    
+                    <a href="#teste" class="arrow-left-mobile">
                         Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        <div class="arrow-left-mobile"><span class="mdi mdi-arrow-left"></span></div>
                     </a>
-                    <a href="#CEO" class="arrow-right">
+
+                    <a href="#CEO" class="arrow-right-mobile">
                         Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        <div class="arrow-right-mobile"><span class="mdi mdi-arrow-right"></span></div>
                     </a>
                 </li>
             </ol>
+
+            <ol class="items_desktop">
+                
+                <li id="CEO" tabindex="0" class="item_three">
+                   
+                        <a href="#teste" class="arrow-left">
+                            Go to last slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#teste" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    
+                    <li id="Business" tabindex="0" class="item_three"></li>
+                </li>
+           
+                <li id="seila" tabindex="0" class="item_three">
+
+                    <li id="teste" tabindex="0" class="item_three">
+                        
+                        <a href="#CEO" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#CEO" class="arrow-right"> 
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+
+                    </li>
+
+                </li>
+
+            </ol>
+
+         
     </section>
 
     <style>
@@ -121,9 +156,8 @@
             margin-left: 1.37px;
         }
 
-        .items_three {
+        .items_desktop, .items_mobile {
             margin-top: 62px;
-            display: flex;
             grid-gap: 24px;
             width: 75%;
             display: flex;
@@ -131,9 +165,14 @@
             scroll-behavior: smooth;
             -ms-overflow-style: none;
             padding: 0;
+           
         }
 
-        /* .items_three::-webkit-scrollbar {
+        .items_mobile {
+            display: none;
+         }
+
+        /* .items_desktop::-webkit-scrollbar {
             display: none;
         } */
 
@@ -184,18 +223,20 @@
         }
 
         .arrow-left span,
-        .arrow-right span {
-
+        .arrow-right span, 
+        .arrow-right-mobile span, 
+        .arrow-left-mobile span{
             font-size: 48px;
             position: absolute;
-
             transform: translateY(-50%);
             cursor: pointer;
 
         }
 
         .arrow-left,
-        .arrow-right {
+        .arrow-right, 
+        .arrow-right-mobile, 
+        .arrow-left-mobile {
             position: absolute;
             font-size: 24px;
             cursor: pointer;
@@ -207,32 +248,43 @@
 
         }
 
-        .arrow-left span {
+        .arrow-left span, .arrow-left-mobile span {
             left: 0;
         }
 
-        .arrow-right span {
+        .arrow-right span, .arrow-right-mobile span {
             right: 0;
 
         }
 
-        .item_three:first-child .arrow-left,
+        .item_three:first-child .arrow-left-mobile,
         .item_three:first-child .arrow-right {
-            display: block;
+            display: none;
         }
 
-        .item_three:focus-within .arrow-left,
+        .item_three:focus-within .arrow-left-mobile,
         .item_three:focus-within .arrow-right {
+            display: none;
+        }
+
+        
+        .item_three:first-child .arrow-left-mobile,
+        .item_three:first-child .arrow-right-mobile {
+            display: block;
+        }
+
+        .item_three:focus-within .arrow-left-mobile,
+        .item_three:focus-within .arrow-right-mobile {
             display: block;
         }
 
 
 
-        .arrow-left {
+        .arrow-left, .arrow-left-mobile {
             left: 0;
         }
 
-        .arrow-right {
+        .arrow-right, .arrow-right-mobile {
             right: 0;
         }
 
@@ -253,6 +305,14 @@
                 width: 70%;
                 height: 992px;
             }
+
+            .items_desktop {
+                display: none;
+            }
+
+            .items_mobile {
+            display: flex;
+         }
         }
     </style>
 </body>

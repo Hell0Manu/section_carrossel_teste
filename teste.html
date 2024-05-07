@@ -23,56 +23,42 @@
                     </a>
                 </div>
             </div>
-            
+
+
+
             <ol class="items_three">
+                
                 <li id="CEO" tabindex="0" class="item_three">
-                    <div class="carousel__snapper">
-                        <a href="#seila" class="arrow-left">
+                   
+                        <a href="#teste" class="arrow-left">
                             Go to last slide
                             <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
                         </a>
-                        <a href="#Business" class="arrow-right">
+                        <a href="#teste" class="arrow-right">
                             Go to next slide
                             <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
                         </a>
-                    </div>
+                    
+                    <li id="Business" tabindex="0" class="item_three"></li>
                 </li>
-
-                <li id="Business" tabindex="0" class="item_three">
-                    <div class="carousel__snapper">
-                    <a href="#CEO" class="arrow-left">
-                        Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
-                    </a>
-                    <a href="#teste" class="arrow-right">
-                        Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                    </a>
-                </li>
-
-                <li id="teste" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#Business" class="arrow-left">
-                        Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
-                    </a>
-                    <a href="#seila" class="arrow-right">
-                        Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                    </a>
-                </li>
-
+           
                 <li id="seila" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#teste" class="arrow-left">
-                        Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
-                    </a>
-                    <a href="#CEO" class="arrow-right">
-                        Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                    </a>
+
+                    <li id="teste" tabindex="0" class="item_three">
+                        
+                        <a href="#CEO" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#CEO" class="arrow-right"> 
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+
+                    </li>
+
                 </li>
+
             </ol>
     </section>
 
@@ -183,15 +169,15 @@
             margin: 15px 0 15px 0;
         }
 
-        .arrow-left span,
-        .arrow-right span {
 
+        .arrow-left span,
+        .arrow-right span, 
+        .arrow-right-desktop span,
+        .arrow-left-desktop span {
             font-size: 48px;
             position: absolute;
-
             transform: translateY(-50%);
             cursor: pointer;
-
         }
 
         .arrow-left,
@@ -204,35 +190,43 @@
             display: none;
             font-size: 0;
             outline: 0;
-
         }
 
-        .arrow-left span {
+        .arrow-right-desktop,
+        .arrow-left-desktop {
+            position: absolute;
+            font-size: 24px;
+            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            font-size: 0;
+            outline: 0;
+        }
+
+        .arrow-left span, .arrow-left-desktop span {
             left: 0;
         }
 
-        .arrow-right span {
+        .arrow-right span, .arrow-right-desktop span {
             right: 0;
 
         }
 
         .item_three:first-child .arrow-left,
-        .item_three:first-child .arrow-right {
+        .item_three:first-child .arrow-right
+        .item_three:first-child .arrow-left-desktop,
+        .item_three:first-child .arrow-right-desktop
+        {
             display: block;
         }
 
-        .item_three:focus-within .arrow-left,
-        .item_three:focus-within .arrow-right {
-            display: block;
-        }
-
-
-
-        .arrow-left {
+    
+        .arrow-left, .arrow-left-desktop {
             left: 0;
         }
 
-        .arrow-right {
+        .arrow-right, .arrow-right-desktop {
             right: 0;
         }
 
@@ -247,6 +241,7 @@
                 align-items: center;
                 justify-content: center;
                 grid-template-columns: repeat(1, 1fr);
+                -webkit-overflow-scrolling: touch;
             }
 
             .container_three {
