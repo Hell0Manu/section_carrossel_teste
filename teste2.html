@@ -25,55 +25,106 @@
             </div>
 
             <ol class="items_three">
-                <li id="CEO" tabindex="0" class="item_three">
-                   
-                        <a href="#teste" class="arrow-left">
+                <li id="slide1" tabindex="0" class="item_three">
+                    <div class="desktop_carrossel">
+                        <a href="#slide4" class="arrow-left">
                             Go to last slide
                             <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
                         </a>
-                        <a href="#teste" class="arrow-right">
+                        <a href="#slide4" class="arrow-right">
                             Go to next slide
                             <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
                         </a>
-                    </li>
-
-                <li id="Business" tabindex="0" class="item_three">
+                    </div>
                 
-                    <a href="#CEO" class="arrow-left">
-                        Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
-                    </a>
-                    <a href="#teste" class="arrow-right">
-                        Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                    </a>
-                </li>
-           
+                    <div class="mobile_carrossel">
+                        <div class="carousel__snapper">
+                            <a href="#slide4" class="arrow-left">
+                                Go to last slide
+                                <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                            </a>
+                            <a href="#slide2" class="arrow-right">
+                                Go to next slide
+                                <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                            </a>
+                        </div>
+                    </div>
 
-                
-
-                <li id="seila" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#teste" class="arrow-left">
-                        Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
-                    </a>
-                    <a href="#CEO" class="arrow-right">
-                        Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                    </a>
                 </li>
 
-                <li id="teste" tabindex="0" class="item_three">
-                    <div class="carousel__snapper"></div>
-                    <a href="#CEO" class="arrow-left">
+               
+
+                <li id="slide2" tabindex="0" class="item_three">
+                    <div class="desktop_carrossel">
+                        <a href="#slide1" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#slide4" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
+                    <div class="mobile_carrossel"> 
+                        <a href="#slide1" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#slide3" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
+                </li>
+
+
+
+
+                <li id="slide3" tabindex="0" class="item_three">
+                    <div class="desktop_carrossel">
+                        <a href="#slide4" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#slide1" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
+                    <div class="mobile_carrossel"> 
+                        <a href="#slide2" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#slide4" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
+
+                </li>
+
+                <li id="slide4" tabindex="0" class="item_three">
+                    <div class="desktop_carrossel">
+                    <a href="#slide1" class="arrow-left">
                         Go to previous slide
                         <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
                     </a>
-                    <a href="#CEO" class="arrow-right">
+                    <a href="#slide1" class="arrow-right">
                         Go to next slide
                         <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
                     </a>
+                    </div>
+                    <div class="mobile_carrossel"> 
+                        <a href="#slide3" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#slide1" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
                 </li>
             </ol>
     </section>
@@ -139,6 +190,8 @@
             display: none;
         } */
 
+ 
+        
 
         .item_three {
             display: flex;
@@ -242,6 +295,14 @@
             background-color: red;
         }
 
+        .mobile_carrossel {
+            display: none;
+        }
+
+        .desktop_carrossel {
+            display: block;
+        }
+
         @media (max-width:1452px) {
 
             .titles_three {
@@ -255,6 +316,15 @@
                 width: 70%;
                 height: 992px;
             }
+
+            .mobile_carrossel {
+            display: block;
+             }
+
+            .desktop_carrossel {
+                display: none;
+            }
+
         }
     </style>
 </body>

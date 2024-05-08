@@ -23,21 +23,39 @@
                     </a>
                 </div>
             </div>
-            
+
             <ol class="items_three">
-                
-                    <li id="CEO" tabindex="0" class="item_three">
-                        <a href="#seila" class="arrow-left">
+                <li id="CEO" tabindex="0" class="item_three">
+                    <div class="desktop_carrossel">
+                        <a href="#teste" class="arrow-left">
                             Go to last slide
                             <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
                         </a>
-                        <a href="#Business" class="arrow-right">
+                        <a href="#teste" class="arrow-right">
                             Go to next slide
                             <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
                         </a>
-                    </li>
+                    </div>
+                
+                    <div class="mobile_carrossel">
+                        <div class="carousel__snapper">
+                            <a href="#teste" class="arrow-left">
+                                Go to last slide
+                                <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                            </a>
+                            <a href="#Business" class="arrow-right">
+                                Go to next slide
+                                <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                            </a>
+                        </div>
+                    </div>
 
-                    <li id="Business" tabindex="0" class="item_three">
+                </li>
+
+               
+
+                <li id="Business" tabindex="0" class="item_three">
+                    <div class="desktop_carrossel">
                         <a href="#CEO" class="arrow-left">
                             Go to previous slide
                             <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
@@ -46,42 +64,49 @@
                             Go to next slide
                             <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
                         </a>
-                    </li>
-
-                    <a href="teste6">
-                        <li id="CEO" tabindex="0" class="item_three">
-                            <a href="#seila" href class="arrow-left">
-                                Go to last slide
-                                <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
-                            </a>
-                            <a href="#Business" class="arrow-right">
-                                Go to next slide
-                                <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                            </a>
-                        </li>
-    
-                        <li id="Business" tabindex="0" class="item_three">
-                           
-                        </li>
+                    </div>
+                    <div class="mobile_carrossel"> 
+                        <a href="#CEO" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#seila" class="arrow-right">
+                            Go to next slide
                             <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                    </a>
-
-                   
-
-                <li id="teste" tabindex="0" class="item_three">
-                    <a href="#Business" class="arrow-left">
-                        Go to previous slide
-                        <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
-                    </a>
-                    <a href="#seila" class="arrow-right">
-                        Go to next slide
-                        <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
-                    </a>
+                        </a>
+                    </div>
                 </li>
 
+
+
+
                 <li id="seila" tabindex="0" class="item_three">
-                    
-                    <a href="#teste" class="arrow-left">
+                    <div class="desktop_carrossel">
+                        <a href="#teste" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#CEO" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
+                    <div class="mobile_carrossel"> 
+                        <a href="#Business" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#teste" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
+
+                </li>
+
+                <li id="teste" tabindex="0" class="item_three">
+                    <div class="desktop_carrossel">
+                    <a href="#CEO" class="arrow-left">
                         Go to previous slide
                         <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
                     </a>
@@ -89,8 +114,18 @@
                         Go to next slide
                         <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
                     </a>
+                    </div>
+                    <div class="mobile_carrossel"> 
+                        <a href="#seila" class="arrow-left">
+                            Go to previous slide
+                            <div class="arrow-left"><span class="mdi mdi-arrow-left"></span></div>
+                        </a>
+                        <a href="#CEO" class="arrow-right">
+                            Go to next slide
+                            <div class="arrow-right"><span class="mdi mdi-arrow-right"></span></div>
+                        </a>
+                    </div>
                 </li>
-
             </ol>
     </section>
 
@@ -155,6 +190,8 @@
             display: none;
         } */
 
+ 
+        
 
         .item_three {
             display: flex;
@@ -258,6 +295,14 @@
             background-color: red;
         }
 
+        .mobile_carrossel {
+            display: none;
+        }
+
+        .desktop_carrossel {
+            display: block;
+        }
+
         @media (max-width:1452px) {
 
             .titles_three {
@@ -271,6 +316,15 @@
                 width: 70%;
                 height: 992px;
             }
+
+            .mobile_carrossel {
+            display: block;
+             }
+
+            .desktop_carrossel {
+                display: none;
+            }
+
         }
     </style>
 </body>
